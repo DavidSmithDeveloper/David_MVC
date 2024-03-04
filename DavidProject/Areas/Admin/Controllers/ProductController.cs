@@ -2,6 +2,8 @@
 using David.DataAccess.Repository.IRepository;
 using David.Models;
 using David.Models.ViewModels;
+using David.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Routing.Constraints;
@@ -10,6 +12,7 @@ using System.Collections.Generic;
 namespace DavidProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles = SD.Role_Admin)]
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

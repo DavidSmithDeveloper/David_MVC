@@ -1,11 +1,15 @@
 ﻿using David.DataAccess.Data;
 using David.DataAccess.Repository.IRepository;
 using David.Models;
+using David.Utility;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DavidProject.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    //[Authorize(Roles=SD.Role_Admin )]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
